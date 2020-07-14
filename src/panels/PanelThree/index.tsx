@@ -8,7 +8,17 @@ const PanelThree: React.FC = () => {
   
   return (
     <div className='panel panel-three'>
-        <span>{activeBoxPrimary.name}</span>
+      {activeBoxPrimary?.messages?.map((mes: any, i: number, arr: any[]) => {
+        const showSenderName = mes.sender.id !== arr[i - 1]?.sender?.id
+        let classes = 'message'
+        if (!showSenderName) classes += ' hide-sender'
+        return (
+          <div className={classes}>
+            {showSenderName && <span className='message-sender-name'>{mes.sender.name}</span>}
+            <span className='message-message'>{mes.body}</span>
+          </div>
+      )})}
+      
         <Compose />
     </div>
   )

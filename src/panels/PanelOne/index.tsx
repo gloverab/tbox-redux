@@ -1,25 +1,25 @@
 import React, { useMemo } from 'react'
 import ContactItem from './ContactItem'
-import { defaultItems, placeholderChannels, placeholderDirect } from '../../constants'
+import { defaultItems, sampleChannels, sampleDirects } from '../../constants'
 import SectionHeader from './SectionHeader'
 
 const PanelOne: React.FC = () => {
 
   const emailItems = useMemo(() => {
     return defaultItems.map(item => {
-      return <ContactItem key={item.key} item={item} />
+      return <ContactItem key={item.channel_id} item={item} />
     })
   }, [])
 
   const placeholderChannelsItems = useMemo(() => {
-    return placeholderChannels.map(item => {
-      return <ContactItem key={item.key} item={item} />
+    return sampleChannels.map(item => {
+      return <ContactItem key={item.channel_id} item={item} />
     })
   }, [])
 
   const placeholderDirectItems = useMemo(() => {
-    return placeholderDirect.map(item => {
-      return <ContactItem key={item.key} item={item} />
+    return sampleDirects.map(item => {
+      return <ContactItem key={item.channel_id} item={item} />
     })
   }, [])
 

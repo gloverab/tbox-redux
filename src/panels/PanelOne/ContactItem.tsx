@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { updateActiveBoxPrimary, selectActiveBoxPrimary } from '../../features/app/appSlice'
 
 interface IContactItemProps {
-  item: { key: string, name: string }
+  item: { channel_id: string, channel_name: string }
 }
 
 const ContactItem: React.FC<IContactItemProps> = ({ item }) => {
@@ -16,14 +16,14 @@ const ContactItem: React.FC<IContactItemProps> = ({ item }) => {
   
   const classNames = useMemo(() => {
     let classes = 'contact-item'
-    if (activeBoxPrimary.key === item.key) classes += ' active'
+    if (activeBoxPrimary.channel_id === item.channel_id) classes += ' active'
     return classes
   }, [activeBoxPrimary, item])
 
   return (
     <button className={classNames} onClick={handleItemClick}>
       <span>&#9786; - </span>
-      <span>{item.name}</span>
+      <span>{item.channel_name}</span>
     </button>
   )
 }

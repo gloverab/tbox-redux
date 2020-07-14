@@ -1,23 +1,23 @@
 export const defaultItems = [
   {
-    key: 'all',
-    name: 'All'
+    channel_id: 'all',
+    channel_name: 'All'
   },
   {
-    key: 'unread',
-    name: 'Unread'
+    channel_id: 'unread',
+    channel_name: 'Unread'
   },
   {
-    key: 'sent',
-    name: 'Sent'
+    channel_id: 'sent',
+    channel_name: 'Sent'
   },
   {
-    key: 'threads',
-    name: 'Threads'
+    channel_id: 'threads',
+    channel_name: 'Threads'
   },
   {
-    key: 'deleted',
-    name: 'Deleted'
+    channel_id: 'deleted',
+    channel_name: 'Deleted'
   }
 ]
 
@@ -36,29 +36,145 @@ export const placeholderChannels = [
   },
   {
     key: 'c4',
-    name: 'Marty, Doc Brown, Einstein'
+    name: 'Marty, Doc Brown, Einstein',
   }
 ]
 
-export const placeholderDirect = [
+export const placeholderUsers = [
   {
-    key: 'd1',
-    name: 'Margel',
+    id: 'ojsdksdffjld',
+    name: 'Alex'
   },
   {
-    key: 'd2',
-    name: 'Morgan',
-  },
-  {
-    key: 'd3',
-    name: 'M3',
-  },
-  {
-    key: 'd4',
-    name: 'Ben',
-  },
-  {
-    key: 'd5',
+    id: 'ojsdkfjld',
     name: 'Raj',
+    channel_name: 'Raj'
+  },
+  {
+    id: 'ojsdfffsdkfjld',
+    name: 'Margel',
+    channel_name: 'Margel'
+  },
+  {
+    id: 'ojsdfsdfffsdkfjld',
+    name: 'Morgan',
+    channel_name: 'Morgan'
+  },
+  {
+    id: 'newjjjeje',
+    name: 'Ben',
+    channel_name: 'Ben'
+  },
+  {
+    id: 'neddffswjjjeje',
+    name: 'Olivia',
+    channel_name: 'Olivia'
   },
 ]
+
+export const sampleDirects = [
+  {
+    channel_id: 'ojsdksdffjld',
+    name: 'Alex',
+    channel_name: 'Alex'
+  },
+  {
+    channel_id: 'ojsdkfjld',
+    name: 'Raj',
+    channel_name: 'Raj'
+  },
+  {
+    channel_id: 'ojsdfffsdkfjld',
+    name: 'Margel',
+    channel_name: 'Margel'
+  },
+  {
+    channel_id: 'ojsdfsdfffsdkfjld',
+    name: 'Morgan',
+    channel_name: 'Morgan'
+  },
+  {
+    channel_id: 'newjjjeje',
+    name: 'Ben',
+    channel_name: 'Ben'
+  },
+  {
+    channel_id: 'neddffswjjjeje',
+    name: 'Olivia',
+    channel_name: 'Olivia'
+  },
+]
+
+
+export const sampleChannels = [
+  {
+    channel_id: "leshdflakfh",
+    channel_name: "Alex, Raj, Margel",
+    messages: [
+      {
+        subject: "subject1",
+        body: "text body text body text body text body text body text body text body text body text body text body text body text body ",
+        sender: placeholderUsers[0],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "subject1",
+        body: "another message from alex. Yup I like to talk, its alright!",
+        sender: placeholderUsers[0],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "subject1",
+        body: "hi guys - hey hello whats up etc",
+        sender: placeholderUsers[1],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "subject1",
+        body: "convo body blah stuff stuff",
+        sender: placeholderUsers[2],
+        sent_at: "12:53pm"
+      },
+  ],
+    channel_members: [placeholderUsers[0], placeholderUsers[1], placeholderUsers[2]]
+  },
+  {
+    channel_id: "les2333hdflakfh",
+    channel_name: "Raj, Ben, Olivia",
+    messages: [
+      {
+        subject: "beer time",
+        body: "lets get lots of expensive beer. you can pay me back",
+        sender: placeholderUsers[4],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "beer time",
+        body: "OKAY I'm a sucker. sounds good!",
+        sender: placeholderUsers[1],
+        sent_at: "12:53pm"
+      },
+  ],
+    channel_members: [placeholderUsers[0], placeholderUsers[1], placeholderUsers[2]]
+  }
+]
+
+export const sampleChannel = {
+  channel_id: "leshdflakfh",
+  channel_name: "channel name1",
+  messages: [
+    {
+      subject: "subject1",
+      body: "text body text body text body text body text body text body text body text body text body text body text body text body ",
+      sender: placeholderUsers[1],
+      sent_at: "12:53pm"
+    },
+    {
+      subject: "subject1",
+      body: "hi guys - hey hello whats up etc",
+      sender: placeholderUsers[1],
+      sent_at: "12:53pm"
+    },
+],
+  channel_members: [placeholderUsers[0], placeholderUsers[1], placeholderUsers[2]]
+}
