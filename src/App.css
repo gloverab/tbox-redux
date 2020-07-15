@@ -226,7 +226,8 @@
 }
 
 .subjects._0 {
-  border-bottom: 4px solid transparent;
+  padding-bottom: 5px;
+  border-bottom: 1px solid RGBa(var(--light));
 }
 
 .subjects._1 {
@@ -285,6 +286,11 @@
   /* border: 2px solid rgb(29, 28, 28); */
   border-top: none;
   box-shadow: none;
+}
+
+.subject-button._0.active {
+  border-bottom: 1px solid RGBa(var(--light));
+  height: 36px;
 }
 
 .subject-button._1 {
