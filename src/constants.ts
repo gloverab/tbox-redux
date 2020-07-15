@@ -178,3 +178,27 @@ export const sampleChannel = {
 ],
   channel_members: [placeholderUsers[0], placeholderUsers[1], placeholderUsers[2]]
 }
+
+
+export const mockSubjects = [
+  {
+    id: 123,
+    title: "Beer chats"
+  },
+  {
+    id: 12342,
+    title: "Stuff about stuff"
+  },
+  {
+    id: 1223342,
+    title: "Subject line"
+  },
+  {
+    id: 1142,
+    title: "three Ms"
+  },
+  {
+    id: 192342,
+    title: "Business ideas"
+  },
+]

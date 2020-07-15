@@ -6,7 +6,9 @@ export const appSlice = createSlice({
     activeBoxPrimary: {},
     activeBoxSecondary: {},
     activeBoxTertiary: {},
-    showCompose: false
+    showCompose: false,
+    activeSubject: {},
+
   },
   reducers: {
     updateActiveBoxPrimary: (state, action) => {
@@ -18,10 +20,13 @@ export const appSlice = createSlice({
     updateActiveBoxTertiary: (state, action) => {
       state.activeBoxTertiary = action.payload;
     },
+    updateActiveSubject: (state, action) => {
+      state.activeSubject = action.payload;
+    },
   },
 });
 
-export const { updateActiveBoxPrimary, updateActiveBoxSecondary, updateActiveBoxTertiary } = appSlice.actions;
+export const { updateActiveBoxPrimary, updateActiveBoxSecondary, updateActiveBoxTertiary, updateActiveSubject } = appSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -37,7 +42,8 @@ export const { updateActiveBoxPrimary, updateActiveBoxSecondary, updateActiveBox
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectActiveBoxPrimary = state => state.app.activeBoxPrimary;
-export const selectActiveBoxSecondary = state => state.app.selectActiveBoxSecondary;
-export const selectActiveBoxTertiary = state => state.app.selectActiveBoxTertiary;
+export const selectActiveBoxSecondary = state => state.app.ActiveBoxSecondary;
+export const selectActiveBoxTertiary = state => state.app.ActiveBoxTertiary;
+export const selectActiveSubject = state => state.app.activeSubject;
 
 export default appSlice.reducer;
