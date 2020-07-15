@@ -349,10 +349,9 @@
   flex: 1;
   padding: 0px 10px;
   flex-direction: column;
-  border-left: 4px solid black;
 }
 
-.messages._0 {
+/* .messages._0 {
   border-left: 4px solid #fff;
 }
 
@@ -374,7 +373,7 @@
 
 .messages._5 {
   border-left: 4px solid RGBa(var(--lightest), 1);
-}
+} */
 
 
 .message {

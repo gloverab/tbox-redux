@@ -110,6 +110,17 @@ export const sampleChannels = [
   {
     channel_id: "leshdflakfh",
     channel_name: "Alex, Raj, Margel",
+    subjects: [
+      {
+        id: 11, title: 'subject1'
+      },
+      {
+        id: 12, title: 'subject2'
+      },
+      {
+        id: 13, title: 'subject3'
+      }
+    ],
     messages: [
       {
         subject: "subject1",
@@ -141,6 +152,17 @@ export const sampleChannels = [
   {
     channel_id: "les2333hdflakfh",
     channel_name: "Raj, Ben, Olivia",
+    subjects: [
+      {
+        id: 1, title: 'beer time'
+      },
+      {
+        id: 2, title: 'fyre festival'
+      },
+      {
+        id: 3, title: 'HR Complaints'
+      }
+    ],
     messages: [
       {
         subject: "beer time",
@@ -152,6 +174,24 @@ export const sampleChannels = [
         subject: "beer time",
         body: "OKAY I'm a sucker. sounds good!",
         sender: placeholderUsers[1],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "fyre festival",
+        body: "Hey guys - I have a great idea for a new music festival. it's gonna be $25 for everyone! \n Best, Ben",
+        sender: placeholderUsers[4],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "fyre festival",
+        body: "Sweeet. Let's make sure we get a lot of celebrities on board.",
+        sender: placeholderUsers[2],
+        sent_at: "12:53pm"
+      },
+      {
+        subject: "fyre festival",
+        body: "Yup! And trust fund babies!!",
+        sender: placeholderUsers[4],
         sent_at: "12:53pm"
       },
   ],

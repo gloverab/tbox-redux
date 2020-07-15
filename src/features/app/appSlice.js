@@ -7,7 +7,7 @@ export const appSlice = createSlice({
     activeBoxSecondary: {},
     activeBoxTertiary: {},
     showCompose: false,
-    activeSubject: {},
+    activeSubject: { id: 1838339, title: 'General' },
 
   },
   reducers: {

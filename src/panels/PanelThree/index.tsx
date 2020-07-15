@@ -8,16 +8,17 @@ import { mockSubjects } from '../../constants'
 const PanelThree: React.FC = () => {
   const [borderBottom, setBorderBottom] = useState('')
   const activeBoxPrimary = useSelector(selectActiveBoxPrimary)
+  const activeSubject = useSelector(selectActiveSubject)
 
   const updateBorderBottom = useCallback((num: string) => {
     setBorderBottom(num)
   }, [])
 
   const subjects = useMemo(() => {
-    return mockSubjects.map((item, i) => {
+    return activeBoxPrimary?.subjects?.map((item: any, i: number) => {
       return <Subject number={i + 1} item={item} updateBorderBottom={updateBorderBottom} />
     })
-  }, [])
+  }, [activeBoxPrimary])
 
   const subjectClasses = useMemo(() => {
     let classNames = 'subjects'
@@ -43,12 +44,15 @@ const PanelThree: React.FC = () => {
           const showSenderName = mes.sender.id !== arr[i - 1]?.sender?.id
           let mesClasses = 'message'
           if (!showSenderName) mesClasses += ' hide-sender'
-          return (
-            <div className={mesClasses}>
-              {showSenderName && <span className='message-sender-name'>{mes.sender.name}</span>}
-              <span className='message-message'>{mes.body}</span>
-            </div>
-        )})}
+          if (mes.subject === activeSubject.title) {
+            return (
+              <div className={mesClasses}>
+                {showSenderName && <span className='message-sender-name'>{mes.sender.name}</span>}
+                <span className='message-message'>{mes.body}</span>
+              </div>
+            )
+          }
+          })}
       </div>
       
         <Compose />
